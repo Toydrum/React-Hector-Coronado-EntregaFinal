@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Cards-Container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
