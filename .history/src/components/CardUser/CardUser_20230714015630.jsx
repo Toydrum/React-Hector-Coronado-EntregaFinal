@@ -13,6 +13,7 @@ const CardUser = ({ data }) => {
         margin: 2,
         maxHeight: 250,
         padding: 5,
+        borderColor: "FFD61F",
       }}
     >
       <CardActionArea>

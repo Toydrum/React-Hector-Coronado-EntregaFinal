@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Components
 import NavBar from "./components/Navbar/Navbar";
 import CartWidged from "./components/CartWidget/CartWidget";
-//import CardUser from "./components/CardUser/CardUser";
-
 //Pages
 import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";

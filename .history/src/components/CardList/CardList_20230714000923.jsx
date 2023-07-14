@@ -10,29 +10,17 @@ const CardList = () => {
   useEffect(() => {
     const getGatito = async () => {
       const q = query(collection(db, "gatitos"));
-      const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id });
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
       });
-
-      setGato(docs);
     };
     getGatito();
+    console.log(gato);
   }, []);
-  console.log(gato);
 
-  return (
-    <div className="Cards-List">
-      {gato.map((gato) => {
-        return (
-          <div key={gato.id}>
-            <CardUser data={gato} />
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <div className="Cards-List"></div>;
 };
 
 export default CardList;

@@ -20,7 +20,6 @@ const CardList = () => {
     };
     getGatito();
   }, []);
-  console.log(gato);
 
   return (
     <div className="Cards-List">

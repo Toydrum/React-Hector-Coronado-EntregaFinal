@@ -19,8 +19,8 @@ const CardList = () => {
       setGato(docs);
     };
     getGatito();
+    console.log(gato);
   }, []);
-  console.log(gato);
 
   return (
     <div className="Cards-List">

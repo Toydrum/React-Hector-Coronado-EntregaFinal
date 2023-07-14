@@ -1,38 +1,25 @@
 import React, { useState, useEffect } from "react";
 import CardUser from "../CardUser/CardUser";
 import "./CardList.css";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 
 const CardList = () => {
   const [gato, setGato] = useState([]);
   useEffect(() => {
-    const getGatito = async () => {
+    getGatito = async () => {
       const q = query(collection(db, "gatitos"));
-      const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id });
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
       });
-
-      setGato(docs);
     };
-    getGatito();
   }, []);
-  console.log(gato);
+  console.log(setGato);
 
-  return (
-    <div className="Cards-List">
-      {gato.map((gato) => {
-        return (
-          <div key={gato.id}>
-            <CardUser data={gato} />
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <div className="Cards-List"></div>;
 };
 
 export default CardList;

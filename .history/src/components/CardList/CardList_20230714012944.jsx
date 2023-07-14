@@ -16,18 +16,17 @@ const CardList = () => {
         docs.push({ ...doc.data(), id: doc.id });
       });
 
-      setGato(docs);
+      console.log(docs);
     };
     getGatito();
   }, []);
-  console.log(gato);
 
   return (
     <div className="Cards-List">
       {gato.map((gato) => {
         return (
           <div key={gato.id}>
-            <CardUser data={gato} />
+            <CardList data={gato} />
           </div>
         );
       })}

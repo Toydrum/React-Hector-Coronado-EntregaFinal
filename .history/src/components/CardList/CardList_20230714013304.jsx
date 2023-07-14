@@ -20,14 +20,13 @@ const CardList = () => {
     };
     getGatito();
   }, []);
-  console.log(gato);
 
   return (
     <div className="Cards-List">
       {gato.map((gato) => {
         return (
           <div key={gato.id}>
-            <CardUser data={gato} />
+            <CardList data={gato} />
           </div>
         );
       })}

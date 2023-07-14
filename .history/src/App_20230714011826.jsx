@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Components
 import NavBar from "./components/Navbar/Navbar";
 import CartWidged from "./components/CartWidget/CartWidget";
-//import CardUser from "./components/CardUser/CardUser";
+import CardUser from "./components/CardUser/CardUser";
 
 //Pages
 import HomePage from "./pages/HomePage/HomePage";
@@ -24,7 +24,9 @@ const App = () => {
           <Route path="/detail/:id" element={<DetailPage />}></Route>
           <Route path="/cart" element={<CartWidged />}></Route>
         </Routes>
-        <div className="Cards-Container"></div>
+        <div className="Cards-Container">
+          <CardUser />
+        </div>
       </div>
     </Router>
   );

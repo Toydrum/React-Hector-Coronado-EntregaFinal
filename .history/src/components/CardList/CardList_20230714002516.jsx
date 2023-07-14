@@ -13,26 +13,15 @@ const CardList = () => {
       const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
         docs.push({ ...doc.data(), id: doc.id });
       });
-
-      setGato(docs);
     };
     getGatito();
+    console.log(gato);
   }, []);
-  console.log(gato);
 
-  return (
-    <div className="Cards-List">
-      {gato.map((gato) => {
-        return (
-          <div key={gato.id}>
-            <CardUser data={gato} />
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <div className="Cards-List"></div>;
 };
 
 export default CardList;

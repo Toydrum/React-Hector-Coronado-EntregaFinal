@@ -7,14 +7,7 @@ import { CardActionArea } from "@mui/material";
 
 const CardUser = ({ data }) => {
   return (
-    <Card
-      sx={{
-        maxWidth: 250,
-        margin: 2,
-        maxHeight: 250,
-        padding: 5,
-      }}
-    >
+    <Card sx={{ maxWidth: 250, margin: 2, maxHeight: 250, padding: 5 }}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={data.img} alt="" />
         <CardContent>
@@ -22,12 +15,7 @@ const CardUser = ({ data }) => {
             gutterBottom
             variant="h7"
             component="div"
-            style={{
-              fontSize: 30,
-              fontFamily: "sitka text",
-              display: "flex",
-              justifyContent: "center",
-            }}
+            style={{ fontSize: 35, fontFamily: "sitka text" }}
           >
             {data.color}
           </Typography>
