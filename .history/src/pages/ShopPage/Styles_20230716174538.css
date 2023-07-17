@@ -1,0 +1,14 @@
+.campo{
+  display: flex;
+  flex-flow: column;
+  background-color : white;
+  color: black;
+  
+}
+
+.caja{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  color:black;
+}

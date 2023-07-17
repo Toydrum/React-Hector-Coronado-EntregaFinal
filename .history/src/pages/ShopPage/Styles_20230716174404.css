@@ -1,0 +1,10 @@
+.campo{
+  background-color : white;
+  color: black;
+  
+}
+
+.caja{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+.campo{
+  display: flex;
+  flex-flow: column;
+  width: 500px;
+  background-color : white;
+  color: black;
+  
+}
+
+.caja{
+
+  color:black;
+}

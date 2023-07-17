@@ -1,0 +1,6 @@
+.adopt{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0;
+}

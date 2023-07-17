@@ -1,0 +1,9 @@
+.detail{
+  display: flex;
+  flex-flow: column;
+  max-width: 500px;
+  max-height: 500px;
+  justify-content: center;
+  margin: auto;
+  color:white;
+}

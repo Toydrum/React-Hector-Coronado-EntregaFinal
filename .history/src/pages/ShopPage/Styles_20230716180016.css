@@ -1,0 +1,22 @@
+.campo{
+  display: flex;
+  flex-flow: column;
+  width: 500px;
+  background-color : white;
+  color: black;
+  
+}
+
+.caja{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  width: 51%;
+  height: 40vh; 
+  color:black;
+}
+
+.titulo{
+  color: white;
+}
