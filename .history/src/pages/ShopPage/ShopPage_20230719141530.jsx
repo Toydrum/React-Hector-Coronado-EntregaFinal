@@ -87,7 +87,7 @@ const ShopPage = () => {
             Enviar
           </button>
         </form>
-        <h1 className="total">Total ${total}</h1>
+
         <div className="Cards-List">
           {gatoState.shoppingCart && gatoState.shoppingCart.length > 0 ? (
             gatoState.shoppingCart.map((gato) => {

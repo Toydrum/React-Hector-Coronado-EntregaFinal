@@ -53,7 +53,7 @@ const ShopPage = () => {
     });
   };
   const precios = gatoState.shoppingCart.map((gato) => gato.donacion);
-  const total = precios.reduce((acumulador, precio) => acumulador + precio, 0);
+  const total = precios.forEach((precio) => precio + precio);
   console.log(total);
 
   console.log("Document written with ID: ", purchaseID);
@@ -87,7 +87,7 @@ const ShopPage = () => {
             Enviar
           </button>
         </form>
-        <h1 className="total">Total ${total}</h1>
+
         <div className="Cards-List">
           {gatoState.shoppingCart && gatoState.shoppingCart.length > 0 ? (
             gatoState.shoppingCart.map((gato) => {
