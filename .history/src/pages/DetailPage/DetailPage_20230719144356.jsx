@@ -4,7 +4,7 @@ import { useGatosContext } from "../../context/GatosContext";
 import DisableElevation from "../../components/Button/Button";
 import "./DetailPage.css";
 
-const DetailPage = () => {
+const DetailPage = ({ gato }) => {
   const [gatoState, setGatoState] = useGatosContext();
   const { id } = useParams();
   const gato =
@@ -26,6 +26,7 @@ const DetailPage = () => {
                 ? "tiene todas las vacunas"
                 : "no tiene todas las vacunas"}
             </p>
+            <DisableElevation />
           </div>
         ) : (
           ""

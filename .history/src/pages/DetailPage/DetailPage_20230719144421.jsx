@@ -26,6 +26,7 @@ const DetailPage = () => {
                 ? "tiene todas las vacunas"
                 : "no tiene todas las vacunas"}
             </p>
+            <DisableElevation />
           </div>
         ) : (
           ""

@@ -83,10 +83,10 @@ const ShopPage = () => {
             value={values.ciudad}
             onChange={handleOnChange}
           />
+          <button type="submit" onClick={onSubmit}>
+            Enviar
+          </button>
         </form>
-        <button type="submit" onClick={onSubmit}>
-          Enviar
-        </button>
         <h1 className="total">Total ${total}</h1>
         <div className="Cards-List">
           {gatoState.shoppingCart && gatoState.shoppingCart.length > 0 ? (
