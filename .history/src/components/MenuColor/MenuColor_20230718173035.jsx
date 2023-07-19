@@ -1,20 +1,24 @@
 import * as React from "react";
-
+import { useEffect } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useGatosContext } from "../../context/GatosContext";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const MenuColor = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [gatoState, setGatoState] = useGatosContext();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  console.log();
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <div>
       <Button

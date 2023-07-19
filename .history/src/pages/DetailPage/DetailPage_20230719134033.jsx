@@ -19,12 +19,8 @@ const DetailPage = () => {
       {gato !== undefined ? (
         <div className="detail">
           <img src={gato.img} className="img" />
-          <p>donación: ${gato.donacion}</p>
-          <p>
-            {gato.vacunas
-              ? "tiene todas las vacunas"
-              : "no tiene todas las vacunas"}
-          </p>
+          <p>{gato.donacion}</p>
+          <p>{`vacunas: ${gato.vacunas}`}</p>
         </div>
       ) : (
         ""

@@ -12,9 +12,8 @@ const MenuColor = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClose = () => {};
+  setAnchorEl(null);
   return (
     <div>
       <Button

@@ -1,20 +1,43 @@
 import * as React from "react";
-
+import { useEffect } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useGatosContext } from "../../context/GatosContext";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const MenuColor = () => {
+  const [gatoState, setGatoState] = useGatosContext();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  useEffect(() => {
+    const getGatito = async () => {
+      const q = query(collection(db, "gatitos"));
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+
+      setGatoState({ gatos: docs, shoppingCart: gatoState.shoppingCart || [] });
+    };
+    getGatito();
+  }, []);
+  const gato =
+    gatoState.gatosFilter && gatoState.gatosFilter.length > 0
+      ? gatoState.gatos.filter((g) => {
+          return g.color === color;
+        })
+      : undefined;
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  console.log(gato);
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <div>
       <Button

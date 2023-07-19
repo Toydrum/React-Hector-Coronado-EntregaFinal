@@ -8,8 +8,7 @@
 }
 
 .caja{
-  display: block;
-  flex-flow: column;
+  display: flex;
   justify-content: center;
   text-align: center;
   width: 51%;

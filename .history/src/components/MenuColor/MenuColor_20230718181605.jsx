@@ -6,15 +6,16 @@ import MenuItem from "@mui/material/MenuItem";
 import { useGatosContext } from "../../context/GatosContext";
 
 const MenuColor = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState("");
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    console.log(event);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClose = (event) => {};
+  console.log(anchorEl);
+
   return (
     <div>
       <Button

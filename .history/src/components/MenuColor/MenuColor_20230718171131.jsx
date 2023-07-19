@@ -1,20 +1,21 @@
 import * as React from "react";
-
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useGatosContext } from "../../context/GatosContext";
 
 const MenuColor = () => {
+  const [gatoState, setGatoState] = useGatosContext();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  console.log(gatoState);
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <div>
       <Button

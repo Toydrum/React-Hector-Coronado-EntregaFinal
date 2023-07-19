@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -11,10 +10,10 @@ const MenuColor = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <div>
       <Button
