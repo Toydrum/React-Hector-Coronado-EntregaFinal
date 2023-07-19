@@ -43,8 +43,12 @@ const CardList = () => {
       {gatoState.gatos && gatoState.gatos.length > 0 ? (
         gatoState.gatos
           .filter((gato) => {
-            return gatoState.gatosFilter?.length > 0
-              ? gatoState.gatosFilter?.includes(gato.color)
+            if (gato.color === "blanco") {
+              console.log(gato);
+              console.log(gatoState.gatosFiltered);
+            }
+            return gatoState.gatosFiltered?.length > 0
+              ? gatoState.gatosFiltered?.includes(gato.color)
               : gato;
           })
           .map((gato) => {

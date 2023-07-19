@@ -11,38 +11,35 @@ export default function BasicSelect() {
   const [age, setAge] = React.useState("");
   const [gatoState, setGatoState] = useGatosContext();
 
+  const blanco = "blanco";
+  const rayado = "rayado";
+  const negro = "negro";
+  const gris = "gris";
   const handleChange = (event) => {
     setAge(event.target.value);
     console.log(event.target.value);
     let gato = event.target.value;
     console.log(gato);
     console.log(gatoState.gatosFilter);
-    if (gato === "ninguno") {
-      gatoState.gatosFilter = [];
-    } else {
-      if (
-        !gatoState.gatosFilter.find((g) => {
-          return g === gato;
-        })
-      ) {
-        gatoState.gatosFilter.push(gato);
-        console.log(gatoState.gatosFilter);
-      }
+    if (
+      !gatoState.gatosFilter.find((g) => {
+        return g === gato;
+      })
+    ) {
+      gatoState.gatosFilter.push(gato);
+      console.log(gatoState.gatosFilter);
+      setGatoState({ ...gatoState, gatosFilter: gatoState.gatosFilter || [] });
     }
-    setGatoState({ ...gatoState, gatosFilter: gatoState.gatosFilter || [] });
   };
   const opciones = ["blanco", "rayado", "negro", "gris", "ninguno"];
   const menuItems = [];
   for (let i = 0; i < opciones.length; i++) {
     menuItems.push(
       <MenuItem
-        className={
-          gatoState.gatosFilter.includes(opciones[i]) ? "selectedItem" : ""
-        }
+        className={gatoState.gatosFilter.includes(opciones[i])}
         value={opciones[i]}
-        key={i + opciones[i]}
       >
-        {opciones[i]}
+        opciones[i]
       </MenuItem>
     );
   }

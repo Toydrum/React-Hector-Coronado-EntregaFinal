@@ -11,6 +11,10 @@ export default function BasicSelect() {
   const [age, setAge] = React.useState("");
   const [gatoState, setGatoState] = useGatosContext();
 
+  const blanco = "blanco";
+  const rayado = "rayado";
+  const negro = "negro";
+  const gris = "gris";
   const handleChange = (event) => {
     setAge(event.target.value);
     console.log(event.target.value);

@@ -43,6 +43,10 @@ const CardList = () => {
       {gatoState.gatos && gatoState.gatos.length > 0 ? (
         gatoState.gatos
           .filter((gato) => {
+            if (gato.color === "blanco") {
+              console.log(gato);
+              console.log(gatoState.gatosFilter);
+            }
             return gatoState.gatosFilter?.length > 0
               ? gatoState.gatosFilter?.includes(gato.color)
               : gato;

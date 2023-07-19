@@ -41,23 +41,17 @@ const CardList = () => {
   return (
     <div className="Cards-List">
       {gatoState.gatos && gatoState.gatos.length > 0 ? (
-        gatoState.gatos
-          .filter((gato) => {
-            return gatoState.gatosFilter?.length > 0
-              ? gatoState.gatosFilter?.includes(gato.color)
-              : gato;
-          })
-          .map((gato) => {
-            return (
-              <div key={gato.id}>
-                <CardUser
-                  data={gato}
-                  handleData={añadirGatito}
-                  accion={"adoptar"}
-                />
-              </div>
-            );
-          })
+        gatoState.gatos.map((gato) => {
+          return (
+            <div key={gato.id}>
+              <CardUser
+                data={gato}
+                handleData={añadirGatito}
+                accion={"adoptar"}
+              />
+            </div>
+          );
+        })
       ) : (
         <p>No hay gatos</p>
       )}

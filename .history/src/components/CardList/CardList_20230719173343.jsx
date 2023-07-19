@@ -43,9 +43,9 @@ const CardList = () => {
       {gatoState.gatos && gatoState.gatos.length > 0 ? (
         gatoState.gatos
           .filter((gato) => {
-            return gatoState.gatosFilter?.length > 0
-              ? gatoState.gatosFilter?.includes(gato.color)
-              : gato;
+            return gatoState.gatosFiltered?.length === 0
+              ? gato
+              : gatoState.gatosFiltered?.includes(gato.color);
           })
           .map((gato) => {
             return (
