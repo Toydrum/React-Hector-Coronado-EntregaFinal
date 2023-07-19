@@ -14,24 +14,22 @@ const DetailPage = () => {
         })
       : undefined;
   return (
-    <>
-      <div className="detail">
-        <h1>{gato && gato.color ? gato.color : "DetailPage"}</h1>
-        {gato !== undefined ? (
-          <div>
-            <img src={gato.img} className="img" />
-            <p>donación: ${gato.donacion}</p>
-            <p>
-              {gato.vacunas
-                ? "tiene todas las vacunas"
-                : "no tiene todas las vacunas"}
-            </p>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </>
+    <div>
+      <h1>{gato && gato.color ? gato.color : "DetailPage"}</h1>
+      {gato !== undefined ? (
+        <div className="detail">
+          <img src={gato.img} className="img" />
+          <p>donación: ${gato.donacion}</p>
+          <p>
+            {gato.vacunas
+              ? "tiene todas las vacunas"
+              : "no tiene todas las vacunas"}
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
   );
 };
 

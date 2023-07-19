@@ -20,7 +20,7 @@ const CardUser = ({ data, handleData, accion }) => {
           maxHeight: 300,
           padding: 5,
           backgroundColor: "#FFAF33",
-          border: 2,
+          border: 3,
           borderColor: "white",
         }}
       >
